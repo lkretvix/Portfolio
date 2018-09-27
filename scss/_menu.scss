@@ -1,5 +1,4 @@
 //CSS for Menu Button
-
 .menu-btn {
     position: absolute;
     z-index: 3;
@@ -41,12 +40,11 @@
 }
 
 //Menu Overlau
-
 .menu {
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    opacity: 1;
     visibility: hidden;
 
     &.show {
@@ -100,7 +98,7 @@
     }
 
     .nav-item {
-        transform: translate3d(600px, 0, 0);
+        transform: translate3d(2000px, 0, 0);
         @include easeOut;
 
         &.show {
@@ -123,7 +121,7 @@
         text-decoration: none;
         @include easeOut;
 
-        &.hover {
+        &:hover {
             color: $secondary-color;
         }
     }
@@ -132,6 +130,6 @@
 //Delay the nav items when they slide in
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
-        transition-delay: $x * 0.1;
+        transition-delay: $x * 0.1s;
     }
 }
